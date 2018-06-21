@@ -19,7 +19,12 @@ Android 破解的hook工具，集成一些帮助破解的常用功能，如自�
 [awesome-frida(github)](https://github.com/dweinstein/awesome-frida)  
 A curated list of awesome projects, libraries, and tools powered by Frida.
 
+
+[radare2逆向笔记
+](https://www.cnblogs.com/pannengzhi/p/play-with-radare2.html)
+
 [jdeferred/jdeferred](https://github.com/jdeferred/jdeferred)  
 Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
 
 [MVPArms](https://github.com/JessYanCoding/MVPArms)
+
