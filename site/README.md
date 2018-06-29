@@ -42,6 +42,9 @@ A curated list of awesome projects, libraries, and tools powered by Frida.
 
 ###4.Others
 [AndroidSecNotes](https://github.com/JnuSimba/AndroidSecNotes) Android 安全时记录的一些笔记  
+[2015移动安全挑战赛（阿里&看雪主办）全程回顾](https://www.secpulse.com/archives/5731.html) 
+
+[吾爱破解2016安全挑战赛cm7 Android CrackMe 分析详解](https://www.52pojie.cn/forum.php?mod=viewthread&tid=484892&digest=1)
 
 ## Android Libs
 
