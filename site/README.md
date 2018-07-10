@@ -23,8 +23,9 @@ Android 破解的hook工具，集成一些帮助破解的常用功能，如自�
 [awesome-frida(github)](https://github.com/dweinstein/awesome-frida)  
 A curated list of awesome projects, libraries, and tools powered by Frida.
 
-[利用FRIDA攻击Android应用程序（三）](https://blog.csdn.net/omnispace/article/details/72528973)
+[利用FRIDA攻击Android应用程序（三）](https://blog.csdn.net/omnispace/article/details/72528973)  
 
+[awesome-frida](https://github.com/dweinstein/awesome-frida)
 
 ### 3.radare2
 
@@ -35,6 +36,7 @@ A curated list of awesome projects, libraries, and tools powered by Frida.
 [Radare 2之旅：通过实例讲解Radare 2在逆向工程中的应用（下）](http://www.360zhijia.com/360anquanke/306181.html)  
 [利用Radare分析Android 恶意软件](https://www.anquanke.com/post/id/84985)  
 [radare2实战](http://www.hetianlab.com/cour.do?w=1&c=Cee9320adea6e062018011816570500001)
+[radare2介绍及简单使用](https://cloud.tencent.com/developer/article/1073910)
 
 
 
@@ -53,6 +55,17 @@ Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
 
 [MVPArms](https://github.com/JessYanCoding/MVPArms)
 
+[Yaksa](https://github.com/ssseasonnn/Yaksa/)  
+
+[DelegationAdapter](https://github.com/xuehuayous/DelegationAdapter)  
+
+[Kakao](https://github.com/agoda-com/Kakao)  
+
+## Others
+
+[高速上手 C++11/14/17](https://github.com/changkun/modern-cpp-tutorial?utm_source=androidweekly.io&utm_medium=website)
+
+[《Linux就该这么学》](https://www.linuxprobe.com/chapter-02.html)
 
 
 
