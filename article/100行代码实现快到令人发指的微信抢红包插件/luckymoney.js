@@ -1,3 +1,5 @@
+
+
 setImmediate(function() {
     console.log("[*] Starting script");
     Java.perform(function() {
@@ -33,9 +35,12 @@ setImmediate(function() {
             }
             
             var type = values.getAsInteger("type");
+            console.log("[insert] -> type: " + type);
             if (type == 436207665) {
-                handleLuckyMoney(values);
-            } 
+                 handleLuckyMoney(values);
+            } else if(type == 1) {
+            	getContent(values);
+            }
         }
 
         ReceiveLuckyMoneyRequest.a.overload('int', 'java.lang.String', 'org.json.JSONObject').implementation = function(arg1, arg2, arg3) {
@@ -48,6 +53,19 @@ setImmediate(function() {
                 var request = LuckyMoneyRequest.$new(1, parseInt(info.channelid), info.sendid, info.nativeurl, "", "", info.talker, "v1.0", timingIdentifier);
                 network.a(request, 0)
             }
+        }
+
+        var JString = Java.use("java.lang.String");
+
+        function getContent(contentValues) {
+        	var content = contentValues.getAsString("content");  
+            console.log("[Content] -> " + content);
+            var bs = stringToBytes(content);
+            console.log(JString.prototype);
+			var textDecoder = new TextDecoder("utf-8");
+			var textEncoder = new TextEncoder("utf-8");
+
+            console.log("[Content] -> " +textDecoder.decode(new Uint8Array(bs)));
         }
 
         function handleLuckyMoney(contentValues) {
@@ -63,6 +81,12 @@ setImmediate(function() {
             }
 
             var content = contentValues.getAsString("content");  
+            console.log(content);
+
+            // var jContent = Java.cast(content, JString);
+            console.log(content.getBytes());
+
+
             var info = parserContent(content);
             info.talker = talker;
             //根据解析的参数构造一个新的请求
@@ -96,3 +120,25 @@ function parserContent(content) {
     
     return info;
 }
+
+
+function stringToBytes( str ) {  
+
+    var ch, st, re = []; 
+    for (var i = 0; i < str.length; i++ ) { 
+        ch = str.charCodeAt(i);  // get char  
+        st = [];                 // set up "stack"  
+
+       do {  
+            st.push( ch & 0xFF );  // push byte to stack  
+            ch = ch >> 8;          // shift value down by 1 byte  
+        }    
+
+        while ( ch );  
+        // add stack contents to result  
+        // done because chars have "wrong" endianness  
+        re = re.concat( st.reverse() ); 
+    }  
+    // return an array of bytes  
+    return re;  
+} 
