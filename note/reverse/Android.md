@@ -37,3 +37,8 @@ lr置0， pc置0
 #### 7.远程调用munmap释放内存
 
 #### 8. 恢复进程， 恢复寄存器环境， 释放附加
+
+
+## 其他
+
+`__attribute__((constructor))`属性。使用这个constructor属性编译的普通ELF文件被加载入内存后，最先执行的不是main函数，而是具有该属性的函数。同样，本项目中利用此属性编译出来的so文件被加载后，尽管so里没有main函数，但是依然能优先执行，且其执行甚至在`JniOnload`之前。于是逆向分析了一下编译出来的so库文件。发现具有constructor属性的函数会被登记在`.init_array`中。（相对应的destructor属性会在ELF卸载时被自动调用，这些函数会被登记入`.fini_array`）

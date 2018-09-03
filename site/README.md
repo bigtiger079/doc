@@ -61,6 +61,16 @@ Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
 
 [Kakao](https://github.com/agoda-com/Kakao)  
 
+## Cheat-engine
+
+[Cheat-engine Download](https://www.cheatengine.org/downloads.php)
+[Cheat-engine](https://github.com/cheat-engine/cheat-engine/)
+
+## 漏洞
+
+[Linux (x86) Exploit 开发系列教程](https://bbs.pediy.com/thread-217390.htm)  
+[二进制漏洞入门教程](https://bbs.pediy.com/thread-208596.htm)
+
 ## Others
 
 [高速上手 C++11/14/17](https://github.com/changkun/modern-cpp-tutorial?utm_source=androidweekly.io&utm_medium=website)
