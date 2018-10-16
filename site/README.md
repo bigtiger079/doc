@@ -48,7 +48,7 @@ A curated list of awesome projects, libraries, and tools powered by Frida.
 
 [吾爱破解2016安全挑战赛cm7 Android CrackMe 分析详解](https://www.52pojie.cn/forum.php?mod=viewthread&tid=484892&digest=1)
 
-## Android Libs
+## 5.Android Libs
 
 [jdeferred/jdeferred](https://github.com/jdeferred/jdeferred)  
 Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
@@ -61,10 +61,16 @@ Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
 
 [Kakao](https://github.com/agoda-com/Kakao)  
 
-## Cheat-engine
+[**HookZz**: A hook framework for arm / arm64 / iOS / Android](https://github.com/jmpews/HookZz)
+
+## 6.Cheat-engine
 
 [Cheat-engine Download](https://www.cheatengine.org/downloads.php)
 [Cheat-engine](https://github.com/cheat-engine/cheat-engine/)
+
+## 7.iphone
+
+[WCShadowrocket](https://github.com/we11cheng/WCShadowrocket)
 
 ## 漏洞
 
@@ -75,7 +81,9 @@ Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
 
 [高速上手 C++11/14/17](https://github.com/changkun/modern-cpp-tutorial?utm_source=androidweekly.io&utm_medium=website)
 
-[《Linux就该这么学》](https://www.linuxprobe.com/chapter-02.html)
+[《Linux就该这么学》](https://www.linuxprobe.com/chapter-02.html)  
+
+[LIEF](https://github.com/lief-project/LIEF)  
 
 
 
