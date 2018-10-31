@@ -85,5 +85,9 @@ Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
 
 [LIEF](https://github.com/lief-project/LIEF)  
 
+[所需即所获：像 IDE 一样使用 vim](https://github.com/yangyangwithgnu/use_vim_as_ide)  
+
+[机器学习训练秘籍](https://accepteddoge.github.io/machine-learning-yearning-cn/)  
+
 
 

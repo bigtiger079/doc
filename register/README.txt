@@ -23,3 +23,12 @@ EA7E-1153259
 5F7EF854 86B9743C FADC04AA FB0DA5C0
 F913BE58 42FEA319 F954EFDD AE881E0B
 ------ END LICENSE ------
+
+## 010Editor
+
+8.0.1 x64
+
+username: bigtiger079
+serial number: A7B5-979C-4CAF-861D
+
+https://www.52pojie.cn/forum.php?mod=viewthread&tid=684119&page=
