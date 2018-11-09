@@ -89,5 +89,7 @@ Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
 
 [机器学习训练秘籍](https://accepteddoge.github.io/machine-learning-yearning-cn/)  
 
+[Dalvik字节码含义查询表](https://blog.csdn.net/jiayanhui2877/article/details/41008985)
+
 
 
