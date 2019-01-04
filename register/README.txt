@@ -32,3 +32,7 @@ username: bigtiger079
 serial number: A7B5-979C-4CAF-861D
 
 https://www.52pojie.cn/forum.php?mod=viewthread&tid=684119&page=
+
+## JET BRAINS
+
+http://idea.lanyus.com/
