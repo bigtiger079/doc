@@ -18,6 +18,11 @@
 [xposedhooktool](https://gitee.com/virjar/xposedhooktool/tree/master)  
 Android 破解的hook工具，集成一些帮助破解的常用功能，如自动网络抓包、网络堆栈爆破、文件日志、webview调试环境，xposed热发，xposed插件热更新等  
 
+[Hardwarecode](https://github.com/1998lixin/Hardwarecode)  
+基于xposed 修改硬件信息  
+
+
+
 ### 2.Frida
 
 [awesome-frida(github)](https://github.com/dweinstein/awesome-frida)  
@@ -29,8 +34,7 @@ A curated list of awesome projects, libraries, and tools powered by Frida.
 
 ### 3.radare2
 
-[radare2逆向笔记
-](https://www.cnblogs.com/pannengzhi/p/play-with-radare2.html)
+[radare2逆向笔记](https://www.cnblogs.com/pannengzhi/p/play-with-radare2.html)
 
 [Radare 2之旅——通过crackme实例讲解Radare 2在逆向工程中的应用（上）](http://www.360zhijia.com/360anquanke/301347.html)  
 [Radare 2之旅：通过实例讲解Radare 2在逆向工程中的应用（下）](http://www.360zhijia.com/360anquanke/306181.html)  
@@ -76,6 +80,7 @@ Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
 
 [Linux (x86) Exploit 开发系列教程](https://bbs.pediy.com/thread-217390.htm)  
 [二进制漏洞入门教程](https://bbs.pediy.com/thread-208596.htm)
+[PWN入门（从零开始学习PWN）](https://www.jianshu.com/p/187b810e78d2)
 
 ## Others
 
