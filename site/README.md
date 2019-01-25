@@ -32,6 +32,8 @@ A curated list of awesome projects, libraries, and tools powered by Frida.
 
 [awesome-frida](https://github.com/dweinstein/awesome-frida)
 
+[bsidesmuc](https://github.com/pspace/bsidesmuc)
+
 ### 3.radare2
 
 [radare2逆向笔记](https://www.cnblogs.com/pannengzhi/p/play-with-radare2.html)
@@ -82,6 +84,12 @@ Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
 [二进制漏洞入门教程](https://bbs.pediy.com/thread-208596.htm)
 [PWN入门（从零开始学习PWN）](https://www.jianshu.com/p/187b810e78d2)
 
+## PWN
+
+[CTF Wiki](https://ctf-wiki.github.io/ctf-wiki/introduction/resources/)  
+[手把手教你栈溢出从入门到放弃](https://zhuanlan.zhihu.com/p/25816426)  
+[PWN入门(从零开始学习PWN)](https://www.jianshu.com/p/187b810e78d2)
+
 ## Others
 
 [高速上手 C++11/14/17](https://github.com/changkun/modern-cpp-tutorial?utm_source=androidweekly.io&utm_medium=website)
@@ -94,7 +102,8 @@ Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
 
 [机器学习训练秘籍](https://accepteddoge.github.io/machine-learning-yearning-cn/)  
 
-[Dalvik字节码含义查询表](https://blog.csdn.net/jiayanhui2877/article/details/41008985)
+[Dalvik字节码含义查询表](https://blog.csdn.net/jiayanhui2877/article/details/41008985)  
+[inlineHook学习分析](https://bbs.pediy.com/thread-225662.htm)
 
 
 
