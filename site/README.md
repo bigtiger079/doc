@@ -54,6 +54,11 @@ A curated list of awesome projects, libraries, and tools powered by Frida.
 
 [吾爱破解2016安全挑战赛cm7 Android CrackMe 分析详解](https://www.52pojie.cn/forum.php?mod=viewthread&tid=484892&digest=1)
 
+[Android PLT hook 概述](https://github.com/iqiyi/xHook/blob/master/docs/overview/android_plt_hook_overview.zh-CN.md)
+
+[Hack 虚拟内存系列](https://xz.aliyun.com/u/9851)
+
+
 ## 5.Android Libs
 
 [jdeferred/jdeferred](https://github.com/jdeferred/jdeferred)  
@@ -82,13 +87,19 @@ Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
 
 [Linux (x86) Exploit 开发系列教程](https://bbs.pediy.com/thread-217390.htm)  
 [二进制漏洞入门教程](https://bbs.pediy.com/thread-208596.htm)
-[PWN入门（从零开始学习PWN）](https://www.jianshu.com/p/187b810e78d2)
+[PWN入门（从零开始学习PWN）](https://www.jianshu.com/p/187b810e78d2)  
+
+[ELF病毒分析](https://xz.aliyun.com/t/2254#toc-3)  
+[Linux64位程序中的漏洞利用](https://evilpan.com/2018/04/15/x64-stack-exploit/)  
 
 ## PWN
 
 [CTF Wiki](https://ctf-wiki.github.io/ctf-wiki/introduction/resources/)  
 [手把手教你栈溢出从入门到放弃](https://zhuanlan.zhihu.com/p/25816426)  
 [PWN入门(从零开始学习PWN)](https://www.jianshu.com/p/187b810e78d2)
+
+[Linux内核ROP姿势详解(一)](https://www.freebuf.com/articles/system/94198.html)  
+[Linux内核ROP姿势详解(二)](https://www.cnblogs.com/0xJDchen/p/6429272.html)
 
 ## Others
 
@@ -103,7 +114,16 @@ Deferred is a Java Deferred/Promise library similar to JQuery's Deferred Object.
 [机器学习训练秘籍](https://accepteddoge.github.io/machine-learning-yearning-cn/)  
 
 [Dalvik字节码含义查询表](https://blog.csdn.net/jiayanhui2877/article/details/41008985)  
-[inlineHook学习分析](https://bbs.pediy.com/thread-225662.htm)
+
+[inlineHook学习分析](https://bbs.pediy.com/thread-225662.htm)  
+
+[打造高效的工作环境 – SHELL 篇](https://coolshell.cn/articles/19219.html)  
+
+[KSMA -- Android 通用 Root 技术](https://bbs.pediy.com/thread-248444.htm)
+
+## IDApro
+
+[IDA Pro7.0使用技巧总结](https://xz.aliyun.com/t/4205#toc-19)  
 
 
 
