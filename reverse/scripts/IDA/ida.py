@@ -60,7 +60,7 @@ def main():
 
 def find_data(addr):
     _addr = addr
-    print "start find sub_A35C caller args[0] from 0x%x" % addr
+    print("start find sub_A35C caller args[0] from 0x%x" % addr)
     func_head = idc.GetFunctionAttr(addr, idc.FUNCATTR_START)
     if func_head == 0:
         print "ERROR: undefinded func code at 0x%x" % addr
