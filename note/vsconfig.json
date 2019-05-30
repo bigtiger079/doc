@@ -1,0 +1,71 @@
+{
+    "terminal.integrated.shell.windows": "cmd.exe",
+    "terminal.integrated.env.windows": {"CMDER_ROOT": "D:\\Program Files (x86)\\cmder"},
+    "terminal.integrated.shellArgs.windows": ["/k", "D:\\Program Files (x86)\\cmder\\vendor\\init.bat"],
+    "git.path":"D:\\Program Files (x86)\\cmder\\vendor\\git-for-windows\\bin\\git.exe",
+
+    //python
+    "python.linting.flake8Enabled": true,   //代码规范提示
+    "python.linting.flake8Args": [
+        "--max-line-length=248"
+    ],
+    "python.formatting.provider": "yapf",   //python 格式化
+    "python.formatting.yapfArgs": [
+        "--style", "{based_on_style: chromium, indent_width: 4, column_limit: 248}"
+     ],
+
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "workbench.colorTheme": "Material Theme Palenight",
+    // 缩进
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+
+    //文件路径导航
+    "breadcrumbs.enabled": true,
+
+    //隐藏「打开的编辑器」窗格
+    "explorer.openEditors.visible": 0,
+
+    //自定义标题栏
+    "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+    // ${dirty}: 当文件修改后未保存时，显示一个圆点。
+    // ${activeEditorMedium}: 当前文件相对于工作区文件夹的路径（例如 myFolder/myFileFolder/myFile.txt）
+    // ${separator}: 一个条件分隔符（"-"），仅当被带有值或静态文本的变量包围时才显示。
+    // ${rootName}: 工作区名称（例如 "myFolder" 或 "myWorkspace"）
+
+    //代码缩略图
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 200,
+    "editor.minimap.showSlider": "always",
+
+    //显示空格
+    "editor.renderWhitespace": "all",
+
+    //平滑滚动
+    "editor.smoothScrolling": true,
+
+    //把光标的动画从 "blink" 改为 "phase" ，那种一明一灭的动画让人有种奇怪的愉悦感：
+    "editor.cursorBlinking": "phase",
+
+    //让光标移动时带有小动画，这样让我们的目光很容易追踪到它：
+    "editor.cursorSmoothCaretAnimation": true,
+
+    //在文件末尾处插入一个空行
+    "files.insertFinalNewline": true,
+
+    //剪裁尾部空格
+    "files.trimTrailingWhitespace": true,
+
+    //禁用上传数据（崩溃报告、使用数据、错误）到 Microsoft 联机服务
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    //关闭自然语言搜索
+    "workbench.settings.enableNaturalLanguageSearch": false,
+
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.fontLigatures": true
+}
