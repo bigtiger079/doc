@@ -76,11 +76,11 @@ class Data():
     def isNumType(self):
         return self.xpr is None
 
-    def data(self):
-        if self.isXprType:
-            return self.xpr + self.num
-        else:
-            return self.num
+    # def data(self):
+    #     if self.isXprType:
+    #         return self.xpr + self.num
+    #     else:
+    #         return self.num
 
     def setDefiner(self, definer):
         self.definer = definer
@@ -99,15 +99,21 @@ class Data():
                 return Data(num=((self.num + value.num) & 0xFFFFFFFF))
             else:
                 num = self.num + value.num
-                # result = Data(xpr=lambda x: self.xpr(x) + value.xpr(x), num=num)
-                # return result
-                return Data(xpr=createLm(3, self.xpr, value.xpr), num=num)
+                if self.isNumType():
+                    return Data(xpr=lambda x: value.xpr(x), num=num)
+                elif value.isNumType():
+                    return Data(xpr=lambda x: self.xpr(x), num=num)
+                else:
+                    return Data(xpr=lambda x: self.xpr(x) + value.xpr(x), num=num)
+
+    def __radd__(self, lhs):
+        return self.__add__(lhs)
 
     # def __or__(self, rhs):
     #     if self.isNumType():
     #         return Data(num=self.num | rhs)
     #     else:
-    #         return Data(xpr)
+    #         return Data(xpr=lambda x: self.xpr(x))
 
     def __xor__(self, rhs):
         if type(rhs) == int:
