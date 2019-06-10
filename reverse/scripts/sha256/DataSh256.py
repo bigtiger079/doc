@@ -1,6 +1,7 @@
+# -- coding: utf-8 --
 import hashlib
 import struct
-from XData import Data, calcCH, calcTmp1, calcMaj, calcTmp2, createLm, DataXpr
+from XData import Data, DataXpr, funcSSIG0, funcSSIG1, funcBSIG0, funcBSIG1, funcCH, funcMaj, calcTmp1, calcTmp2  # , calcCH, calcTmp1, calcMaj, calcTmp2, createLm, DataXpr
 
 
 def out_hex(data):
@@ -92,17 +93,15 @@ def CF(V_i, B_i):
         s1 = P_1(W[j - 2])
         W[j] = (W[j - 16] + s0 + W[j - 7] + s1) & 0xFFFFFFFF
 
-        xdata = indexValue[str(j - 16)] + indexValue[str(j - 15)].getP0() + indexValue[str(j - 7)] + indexValue[str(j - 2)].getP1()
-        indexValue[str(j)] = xdata.dAnd(0xFFFFFFFF)
+        # xdata = indexValue[str(j - 16)] + indexValue[str(j - 15)].getP0() + indexValue[str(j - 7)] + indexValue[str(j - 2)].getP1()
+        xdata = indexValue[str(j - 16)] + funcSSIG0(indexValue[str(j - 15)]) + indexValue[str(j - 7)] + funcSSIG1(indexValue[str(j - 2)])
+        indexValue[str(j)] = xdata.xAnd(0xFFFFFFFF)
 
-        str1 = "%08x" % W[j]
+        # str1 = "%08x" % W[j]
 
-    W_1 = []
+    # W_1 = []
     A, B, C, D, E, F, G, H = V_i
-    """
-    print "00",
-    out_hex([A, B, C, D, E, F, G, H])
-    """
+
     """
     S1 := (e rightrotate 6) xor (e rightrotate 11) xor (e rightrotate 25)
     ch := (e and f) xor ((not e) and g)
@@ -159,11 +158,11 @@ def CF(V_i, B_i):
         G = G & 0xFFFFFFFF
         H = H & 0xFFFFFFFF
 
-        xss1 = encE.getSS1()
-        xss0 = encA.getSS0()
-        xch = calcCH(encE, encF, encG)
+        xss1 = funcBSIG1(encE)  # .getSS1()
+        xss0 = funcBSIG0(encA)  # .getSS0()
+        xch = funcCH(encE, encF, encG)
         xtmp1 = calcTmp1(encH, xss1, xch, K[j], indexValue[str(j)])
-        xmaj = calcMaj(encA, encB, encC)
+        xmaj = funcMaj(encA, encB, encC)
         xtmp2 = calcTmp2(xss0, xmaj)
 
         encH = encG
@@ -175,14 +174,14 @@ def CF(V_i, B_i):
         encB = encA
         encA = (xtmp1 + xtmp2)
 
-        encA = encA.dAnd(0xFFFFFFFF)
-        encB = encB.dAnd(0xFFFFFFFF)
-        encC = encC.dAnd(0xFFFFFFFF)
-        encD = encD.dAnd(0xFFFFFFFF)
-        encE = encE.dAnd(0xFFFFFFFF)
-        encF = encF.dAnd(0xFFFFFFFF)
-        encG = encG.dAnd(0xFFFFFFFF)
-        encH = encH.dAnd(0xFFFFFFFF)
+        encA = encA.xAnd(0xFFFFFFFF)
+        encB = encB.xAnd(0xFFFFFFFF)
+        encC = encC.xAnd(0xFFFFFFFF)
+        encD = encD.xAnd(0xFFFFFFFF)
+        encE = encE.xAnd(0xFFFFFFFF)
+        encF = encF.xAnd(0xFFFFFFFF)
+        encG = encG.xAnd(0xFFFFFFFF)
+        encH = encH.xAnd(0xFFFFFFFF)
         """
         str1 = "%02d" % j
         if str1[0] == "0":
@@ -222,14 +221,14 @@ def CF(V_i, B_i):
     V_i_1.append((H + V_i[7]) & 0xFFFFFFFF)
 
     XV_i_1 = []
-    XV_i_1.append((encA + V_i[0]).dAnd(0xFFFFFFFF))
-    XV_i_1.append((encB + V_i[1]).dAnd(0xFFFFFFFF))
-    XV_i_1.append((encC + V_i[2]).dAnd(0xFFFFFFFF))
-    XV_i_1.append((encD + V_i[3]).dAnd(0xFFFFFFFF))
-    XV_i_1.append((encE + V_i[4]).dAnd(0xFFFFFFFF))
-    XV_i_1.append((encF + V_i[5]).dAnd(0xFFFFFFFF))
-    XV_i_1.append((encG + V_i[6]).dAnd(0xFFFFFFFF))
-    XV_i_1.append((encH + V_i[7]).dAnd(0xFFFFFFFF))
+    XV_i_1.append((encA + V_i[0]).xAnd(0xFFFFFFFF))
+    XV_i_1.append((encB + V_i[1]).xAnd(0xFFFFFFFF))
+    XV_i_1.append((encC + V_i[2]).xAnd(0xFFFFFFFF))
+    XV_i_1.append((encD + V_i[3]).xAnd(0xFFFFFFFF))
+    XV_i_1.append((encE + V_i[4]).xAnd(0xFFFFFFFF))
+    XV_i_1.append((encF + V_i[5]).xAnd(0xFFFFFFFF))
+    XV_i_1.append((encG + V_i[6]).xAnd(0xFFFFFFFF))
+    XV_i_1.append((encH + V_i[7]).xAnd(0xFFFFFFFF))
     print(encA.xpr)
 
     return V_i_1
