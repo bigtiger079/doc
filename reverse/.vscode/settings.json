@@ -1,6 +1,0 @@
-{
-    "python.pythonPath": "D:\\Program Files\\cmder\\vendor\\python3.7\\python.exe",
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "workbench.settings.editor": "json"
-}

@@ -1,6 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import json
+plt.figure(figsize=(50,50))
 
 def draw(classes):
     G = nx.DiGraph()
@@ -9,8 +10,9 @@ def draw(classes):
     
     print('start draw')
     nx.draw(G)
-    print('start savefig')
-    plt.savefig("classes.png")
+    # print('start savefig')
+    # plt.savefig("classes.png")
+    
     print('start show')
     plt.show()
 
