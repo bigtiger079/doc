@@ -1,0 +1,14 @@
+{
+	"backup":[{
+		"src":"C:\\Users\\Administrator\\.vscode",
+		"dest":"E:\\Workstation\\backup\\vscode\\extension"
+	},{
+		"src":"C:\\Users\\Administrator\\AppData\\Roaming\\Code",
+		"dest":"E:\\Workstation\\backup\\vscode\\settings"
+	}],
+	"links":{
+		"deskDir":"C:\\Users\\Administrator\\Desktop",
+		"storeDir":"E:\\Workstation\\backup\\Links"
+	},
+	"logger":"E:\\Workstation\\backup\\task.log"
+}

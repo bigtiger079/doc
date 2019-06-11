@@ -1,8 +1,6 @@
 ## Markdownpad2
 
-User£ºa
-
-Soar360@live.com
+User£ºSoar360@live.com
 
 ÊÚÈ¨£º
 
@@ -11,7 +9,6 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 ## Sublin text3
 
 ----- BEGIN LICENSE -----
-sgbteam
 Single User License
 EA7E-1153259
 8891CBB9 F1513E4F 1A3405C1 A865D53F
