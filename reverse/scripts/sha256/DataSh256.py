@@ -93,13 +93,9 @@ def CF(V_i, B_i):
         s1 = P_1(W[j - 2])
         W[j] = (W[j - 16] + s0 + W[j - 7] + s1) & 0xFFFFFFFF
 
-        # xdata = indexValue[str(j - 16)] + indexValue[str(j - 15)].getP0() + indexValue[str(j - 7)] + indexValue[str(j - 2)].getP1()
         xdata = indexValue[str(j - 16)] + funcSSIG0(indexValue[str(j - 15)]) + indexValue[str(j - 7)] + funcSSIG1(indexValue[str(j - 2)])
-        indexValue[str(j)] = xdata.xAnd(0xFFFFFFFF)
+        indexValue[str(j)] = xdata & (0xFFFFFFFF)
 
-        # str1 = "%08x" % W[j]
-
-    # W_1 = []
     A, B, C, D, E, F, G, H = V_i
 
     """
@@ -174,41 +170,17 @@ def CF(V_i, B_i):
         encB = encA
         encA = (xtmp1 + xtmp2)
 
-        encA = encA.xAnd(0xFFFFFFFF)
-        encB = encB.xAnd(0xFFFFFFFF)
-        encC = encC.xAnd(0xFFFFFFFF)
-        encD = encD.xAnd(0xFFFFFFFF)
-        encE = encE.xAnd(0xFFFFFFFF)
-        encF = encF.xAnd(0xFFFFFFFF)
-        encG = encG.xAnd(0xFFFFFFFF)
-        encH = encH.xAnd(0xFFFFFFFF)
-        """
-        str1 = "%02d" % j
-        if str1[0] == "0":
-                str1 = ' ' + str1[1:]
-        print str1,
-        out_hex([A, B, C, D, E, F, G, H])
-        """
+        encA = encA & (0xFFFFFFFF)
+        encB = encB & (0xFFFFFFFF)
+        encC = encC & (0xFFFFFFFF)
+        encD = encD & (0xFFFFFFFF)
+        encE = encE & (0xFFFFFFFF)
+        encF = encF & (0xFFFFFFFF)
+        encG = encG & (0xFFFFFFFF)
+        encH = encH & (0xFFFFFFFF)
 
     print("After Encode: ")
     print(A, B, C, D, E, F, G, H)
-
-    # for j in range(0, 64):
-    #     Ar = B
-    #     Br = C
-    #     Cr = D
-    #     Er = F
-    #     Fr = G
-    #     Gr = H
-    #     SS0 = rotate_right(Ar,2) ^ rotate_right(Ar,13) ^ rotate_right(Ar,22)
-    #     SS1 = rotate_right(Er,6) ^ rotate_right(Er,11) ^ rotate_right(Er,25)
-    #     ch  = (Er & Fr) ^ ((~Er) & Gr)
-    #     maj = (Ar & Br) ^ (Ar & Cr) ^ ( Br & Cr)
-    #     t2 = (SS0 + maj) & 0xFFFFFFFF
-    #     t1 = A - t2
-    #     Dr = E - t1
-    #     #t1 = (Hr + SS1 + ch + K[63 - j] + W[63 - j]) & 0xFFFFFFFF
-    #     Hr + W[63 - j] = t1 - SS1 - K[63 - j] - ch
 
     V_i_1 = []
     V_i_1.append((A + V_i[0]) & 0xFFFFFFFF)
@@ -221,16 +193,18 @@ def CF(V_i, B_i):
     V_i_1.append((H + V_i[7]) & 0xFFFFFFFF)
 
     XV_i_1 = []
-    XV_i_1.append((encA + V_i[0]).xAnd(0xFFFFFFFF))
-    XV_i_1.append((encB + V_i[1]).xAnd(0xFFFFFFFF))
-    XV_i_1.append((encC + V_i[2]).xAnd(0xFFFFFFFF))
-    XV_i_1.append((encD + V_i[3]).xAnd(0xFFFFFFFF))
-    XV_i_1.append((encE + V_i[4]).xAnd(0xFFFFFFFF))
-    XV_i_1.append((encF + V_i[5]).xAnd(0xFFFFFFFF))
-    XV_i_1.append((encG + V_i[6]).xAnd(0xFFFFFFFF))
-    XV_i_1.append((encH + V_i[7]).xAnd(0xFFFFFFFF))
-    print(encA.xpr)
+    XV_i_1.append((encA + V_i[0]) & (0xFFFFFFFF))
+    XV_i_1.append((encB + V_i[1]) & (0xFFFFFFFF))
+    XV_i_1.append((encC + V_i[2]) & (0xFFFFFFFF))
+    XV_i_1.append((encD + V_i[3]) & (0xFFFFFFFF))
+    XV_i_1.append((encE + V_i[4]) & (0xFFFFFFFF))
+    XV_i_1.append((encF + V_i[5]) & (0xFFFFFFFF))
+    XV_i_1.append((encG + V_i[6]) & (0xFFFFFFFF))
+    XV_i_1.append((encH + V_i[7]) & (0xFFFFFFFF))
 
+    # print(encA)
+    print(encA.xpr)
+    print(encA.num)
     return V_i_1
 
 

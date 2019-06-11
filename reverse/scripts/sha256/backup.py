@@ -182,6 +182,14 @@ class Data():
             else:
                 return Data(xpr=lambda x: (lhs.getData(x) << (self.getData(x) % 32) & 0xFFFFFFFF))
 
+    def lsh(self, x):
+        if self.isNumType():
+            r = (self.num << (x % 32)) & 0xFFFFFFFF
+            return Data(num=r)
+        else:
+            # return Data(xpr=lambda y: (((self.xpr(y) + self.num) << x) & 0xFFFFFFFF))
+            return Data(xpr=createLm(4, self.xpr, self.num))
+
     def __rshift__(self, rhs):
         if type(rhs) == int:
             if self.isNumType():
@@ -233,6 +241,44 @@ class Data():
                 return Data(num=lhs.num % self.num)
             else:
                 return Data(xpr=lambda x:self.getData(x) % (lhs.getData(x)))
+
+    def rsh(self, x):
+        if self.isNumType():
+            r = (self.num >> (x % 32)) & 0xFFFFFFFF
+            return Data(num=r)
+        else:
+            # return Data(xpr=lambda y: (((self.xpr(y) + self.num) >> x) & 0xFFFFFFFF))
+            return Data(xpr=createLm(5, self.xpr, self.num))
+
+    def xor(self, k):
+        if type(k) == int:
+            if self.isNumType():
+                return Data(num=self.num ^ k)
+            else:
+                # return Data(xpr=lambda x: (self.xpr(x) + self.num) ^ k)
+                return Data(xpr=createLm(6, self.xpr, self.num, k))
+        else:
+            if self.isNumType():
+                # return Data(xpr=lambda x: (k.xpr(x) + k.num) ^ self.num)
+                return Data(xpr=createLm(6, k.xpr, k.num, self.num))
+            else:
+                # return Data(xpr=lambda x: (self.xpr(x) + self.num) ^ (k.xpr(x) + k.num))
+                return Data(xpr=createLm(7, self.xpr, self.num, k.xpr, k.num))
+
+    def xAnd(self, k):
+        if type(k) == int:
+            if self.isNumType():
+                return Data(num=self.num & k)
+            else:
+                # return Data(xpr=lambda x: (self.xpr(x) + self.num) & k)
+                return Data(xpr=createLm(8, self.xpr, self.num, k))
+        else:
+            if self.isNumType():
+                # return Data(xpr=lambda x: (k.xpr(x) + k.num) & self.num)
+                return Data(xpr=createLm(9, k.xpr, k.num, self.num))
+            else:
+                # return Data(xpr=lambda x: (self.xpr(x) + self.num) & (k.xpr(x) + k.num))
+                return Data(xpr=createLm(10, self.xpr, self.num, k.xpr, k.num))
 
     def __invert__(self):  # ~x
         if self.isNumType():
@@ -355,7 +401,7 @@ def rotate_left(a, k):
 
 def rotate_right(a, k):
     k = k % 32
-    return ((a >> k) & 0xFFFFFFFF) | ((a & 0xFFFFFFFF) << (32 - k))
+    return (((a >> k) & 0xFFFFFFFF) | ((a & 0xFFFFFFFF) << (32 - k))) & 0xFFFFFFFF
 
 
 def rotate_shift(a, k):
